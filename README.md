@@ -3,13 +3,13 @@
 
 ## API Documentation :
 
-     => To get all users 
+## To get all users 
     [GET] http//:localhost:8000/users/
     
-     => To get a user by its ID  
+## To get a user by its ID  
     [GET] http//:localhost:8000/user/id 
 
-     => To signup a user 
+## To signup a user 
     [POST] http//:localhost:8000/signup/
      example:  {
             "username": "oussama",
@@ -23,7 +23,7 @@
             "banned": false
         }
     
-     => To signin a user 
+## To signin a user 
     [POST] http//:localhost:8000/signin/
      example: {
             "username":"ilyes",
