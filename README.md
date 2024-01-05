@@ -1,19 +1,19 @@
 # Dawproject
 
 # Please change configuration for your database in settings.py
+
      by defualt database is set to postgresql USERNAME='postgres' PASSWORD = '1234'
-# Please run this command to install the packages used in this project 
+
+# Please run this command to install the packages used in this project
+
      pip install django djangorestframework django-cors-headers psycopg2-binary rest_framework_simplejwt
 
+# first migrate the models to the database then insert the following insert statement
 
-# first migrate the modles to the database then insert the following insert statement 
+insert into "Quiz_questionnaire" ("questionnaireName", "dateOfTheQuestionnaire") VALUES ('Test Questionnaire','
+2023-12-23 11:31:16.649999+01');
 
-  insert into "Quiz_questionnaire" ("questionnaireName", "dateOfTheQuestionnaire") VALUES ('Test Questionnaire','2023-12-23 11:31:16.649999+01');
-
-
-
-
- INSERT INTO Quiz_question (id, questionText, questionType, id_Questionnaire_id) VALUES
+INSERT INTO Quiz_question (id, questionText, questionType, id_Questionnaire_id) VALUES
 
 (1, 'Gender: Personal information', 1, 1),
 
@@ -37,11 +37,13 @@
 
 (11, 'How do you react when you cannot play video games? Video Game Addiction Assessment', 1, 1),
 
-(12, 'Have you ever felt a growing need to play to get the same sense of pleasure or excitement? Video Game Addiction Assessment', 1, 1),
+(12, 'Have you ever felt a growing need to play to get the same sense of pleasure or excitement? Video Game Addiction
+Assessment', 1, 1),
 
 (13, 'How do video games affect your sleep? Video Game Addiction Assessment', 1, 1),
 
-(14, 'Have you ever neglected work or school responsibilities because of video games? Video Game Addiction Assessment', 1, 1),
+(14, 'Have you ever neglected work or school responsibilities because of video games? Video Game Addiction Assessment',
+1, 1),
 
 (15, 'Have you tried to reduce your playing time without success? Video Game Addiction Assessment', 1, 1),
 
@@ -49,46 +51,60 @@
 
 (17, 'Have you ever borrowed money to buy video games or game-related content? Video Game Addiction Assessment', 1, 1),
 
-(18, 'How would you describe your level of concentration while playing video games? Video Game Addiction Assessment', 1, 1),
+(18, 'How would you describe your level of concentration while playing video games? Video Game Addiction Assessment', 1,
+1),
 
 (19, 'Have you ever experienced physical symptoms due to prolonged play? Video Game Addiction Assessment', 1, 1),
 
-(20, 'Have video games had a negative impact on your productivity at work or school? Video Game Addiction Assessment', 1, 1),
+(20, 'Have video games had a negative impact on your productivity at work or school? Video Game Addiction Assessment',
+1, 1),
 
-(21, 'How many times have you neglected important activities to play video games? Video Game Addiction Assessment', 1, 1),
+(21, 'How many times have you neglected important activities to play video games? Video Game Addiction Assessment', 1,
+1),
 
-(22, 'Have you ever had conflicts with friends or family because of your time playing video games? Video Game Addiction Assessment', 1, 1),
+(22, 'Have you ever had conflicts with friends or family because of your time playing video games? Video Game Addiction
+Assessment', 1, 1),
 
-(23, 'What is your emotional state after playing video games for long periods of time? Video Game Addiction Assessment', 1, 1),
+(23, 'What is your emotional state after playing video games for long periods of time? Video Game Addiction Assessment',
+1, 1),
 
 (24, 'Have you ever missed social events to play video games? Video Game Addiction Assessment', 1, 1),
 
-(25, 'Have you developed specific routines or rituals before or during the video game? Video Game Addiction Assessment', 1, 1),
+(25, 'Have you developed specific routines or rituals before or during the video game? Video Game Addiction Assessment',
+1, 1),
 
-(26, 'Do you feel the constant need to check for updates or new game-related content? Video Game Addiction Assessment', 1, 1),
+(26, 'Do you feel the constant need to check for updates or new game-related content? Video Game Addiction Assessment',
+1, 1),
 
-(27, 'How much time a day do you spend thinking about video games when you’re not playing? Video Game Addiction Assessment', 1, 1),
+(27, 'How much time a day do you spend thinking about video games when you’re not playing? Video Game Addiction
+Assessment', 1, 1),
 
-(28, 'Have you ever hidden or minimized the amount of time you spend playing video games to your loved ones? Video Game Addiction Assessment', 1, 1),
+(28, 'Have you ever hidden or minimized the amount of time you spend playing video games to your loved ones? Video Game
+Addiction Assessment', 1, 1),
 
 (29, 'Do you often feel guilty after playing video games for a long time? Video Game Addiction Assessment', 1, 1),
 
-(30, 'Have you ever missed personal or professional engagements due to extended gaming sessions? Video Game Addiction Assessment', 1, 1),
+(30, 'Have you ever missed personal or professional engagements due to extended gaming sessions? Video Game Addiction
+Assessment', 1, 1),
 
-(31, 'Have you had memory or concentration problems outside of the game after an extended game session? Video Game Addiction Assessment', 1, 1),
+(31, 'Have you had memory or concentration problems outside of the game after an extended game session? Video Game
+Addiction Assessment', 1, 1),
 
 (32, 'Have video games had a negative impact on your love life? Video Game Addiction Assessment', 1, 1),
 
-(33, 'Have you ever sacrificed physical activities or sports to play video games? Video Game Addiction Assessment', 1, 1),
+(33, 'Have you ever sacrificed physical activities or sports to play video games? Video Game Addiction Assessment', 1,
+1),
 
-(34, 'Do you feel the need to play video games to escape problems or negative feelings? Video Game Addiction Assessment', 1, 1),
+(34, 'Do you feel the need to play video games to escape problems or negative feelings? Video Game Addiction
+Assessment', 1, 1),
 
-(35, 'Have you ever experienced significant mood swings when you couldn’t play video games? Video Game Addiction Assessment', 1, 1),
+(35, 'Have you ever experienced significant mood swings when you couldn’t play video games? Video Game Addiction
+Assessment', 1, 1),
 
-(36, 'How would you rate your level of addiction or emotional attachment to video games? Video Game Addiction Assessment', 1, 1);
+(36, 'How would you rate your level of addiction or emotional attachment to video games? Video Game Addiction
+Assessment', 1, 1);
 
-
- INSERT INTO "Quiz_option" (id, "optionText", point, "id_Question_id") VALUES
+INSERT INTO "Quiz_option" (id, "optionText", point, "id_Question_id") VALUES
 
 (1, 'Male', 0.00, 1),
 
@@ -380,6 +396,35 @@
 
 (145, 'Very high', 0.75, 36);
 
+## API Documentation :
+
+     => To get all users 
+    [GET] http//:localhost:8000/users/
+    
+     => To get a user by its ID  
+    [GET] http//:localhost:8000/user/id 
+
+     => To signup a user 
+    [POST] http//:localhost:8000/signup/
+     example:  {
+            "username": "oussama",
+            "password": "12345678",
+            "email": "oussama@gmail.com",
+            "is_staff": false,
+            "is_superuser": false,
+            "dateOfBirth": "2003-07-08",
+            "is_active": true,
+            "gender": "m",
+            "banned": false
+        }
+    
+     => To signin a user 
+    [POST] http//:localhost:8000/signin/
+     example: {
+            "username":"ilyes",
+            "password":"1234"
+        }
+        
 
 
 
