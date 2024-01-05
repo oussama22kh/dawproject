@@ -1,4 +1,39 @@
-# Dawproject
+## Daw Project
+
+
+## API Documentation :
+
+     => To get all users 
+    [GET] http//:localhost:8000/users/
+    
+     => To get a user by its ID  
+    [GET] http//:localhost:8000/user/id 
+
+     => To signup a user 
+    [POST] http//:localhost:8000/signup/
+     example:  {
+            "username": "oussama",
+            "password": "12345678",
+            "email": "oussama@gmail.com",
+            "is_staff": false,
+            "is_superuser": false,
+            "dateOfBirth": "2003-07-08",
+            "is_active": true,
+            "gender": "m",
+            "banned": false
+        }
+    
+     => To signin a user 
+    [POST] http//:localhost:8000/signin/
+     example: {
+            "username":"ilyes",
+            "password":"1234"
+        }
+        
+
+
+
+
 
 # Please change configuration for your database in settings.py
 
@@ -395,36 +430,3 @@ INSERT INTO "Quiz_option" (id, "optionText", point, "id_Question_id") VALUES
 (144, 'High', 0.50, 36),
 
 (145, 'Very high', 0.75, 36);
-
-## API Documentation :
-
-     => To get all users 
-    [GET] http//:localhost:8000/users/
-    
-     => To get a user by its ID  
-    [GET] http//:localhost:8000/user/id 
-
-     => To signup a user 
-    [POST] http//:localhost:8000/signup/
-     example:  {
-            "username": "oussama",
-            "password": "12345678",
-            "email": "oussama@gmail.com",
-            "is_staff": false,
-            "is_superuser": false,
-            "dateOfBirth": "2003-07-08",
-            "is_active": true,
-            "gender": "m",
-            "banned": false
-        }
-    
-     => To signin a user 
-    [POST] http//:localhost:8000/signin/
-     example: {
-            "username":"ilyes",
-            "password":"1234"
-        }
-        
-
-
-
