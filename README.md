@@ -16,11 +16,7 @@
             "password": "12345678",
             "email": "oussama@gmail.com",
             "is_staff": false,
-            "is_superuser": false,
-            "dateOfBirth": "2003-07-08",
-            "is_active": true,
-            "gender": "m",
-            "banned": false
+            "is_superuser": false
         }
     
 ## To signin a user 
@@ -30,9 +26,17 @@
             "password":"1234"
         }
         
+## More info (by ID)
+     [POST] http//:localhost:8000/user/id
+    example :{
+            "gender":"m",
+            "dateOfBirth":"2000-02-03", 
+            "firstName":"Mensour", 
+            "lastName":"Fekhar"
+        }
 
-
-
+## Delete a User by ID
+    [DELETE] http//:localhost:8000/user/id
 
 
 # Please change configuration for your database in settings.py

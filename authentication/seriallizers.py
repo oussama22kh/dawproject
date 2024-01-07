@@ -20,3 +20,15 @@ class UserLoginSerializer(serializers.Serializer):
         if not user:
             raise ValidationError('user not found')
         return user
+
+
+class UserRegisterSerializer(serializers.ModelSerializer):
+    class Meta(object):
+        model = User
+        fields = ['username', 'password', 'email', 'is_staff', 'is_superuser']
+
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta(object):
+        model = User
+        fields = ['gender', 'dateOfBirth', 'firstName', 'lastName']

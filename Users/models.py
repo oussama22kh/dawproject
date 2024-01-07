@@ -28,13 +28,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     firstName = models.CharField(max_length=45)
     lastName = models.CharField(max_length=45)
     gender = models.CharField(max_length=1, choices=Gender, default='m', blank=True)
-    dateOfBirth = models.DateField(null=True, )
+    dateOfBirth = models.DateField(null=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     email = models.EmailField(null=True, unique=True)
     password = models.CharField(max_length=255)
     banned = models.BooleanField(default=False)
-    country = models.CharField(max_length=50)
 
     USERNAME_FIELD = 'username'
 
