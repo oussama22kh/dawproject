@@ -73,5 +73,11 @@ class userDetail(APIView):
         user.delete()
         return Response({'message': 'User Deleted Successfully'}, status=status.HTTP_200_OK)
 
-    def post(self, request, pk):
+    def put(self, request, pk):
         user = User.objects.get(pk=pk)
+        data = request.data
+        serializer = UserSerializer(user, data=data)
+        if serializer.is_valid():
+            user.update(user,data)
+            return Response({'message': 'User Updated Successfully'}, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
