@@ -34,6 +34,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(null=True, unique=True)
     password = models.CharField(max_length=255)
     banned = models.BooleanField(default=False)
+    country = models.CharField(max_length=50)
 
     USERNAME_FIELD = 'username'
 

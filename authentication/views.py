@@ -68,5 +68,10 @@ class userDetail(APIView):
         user = UserSerializer(user).data
         return Response({'user': user}, status=status.HTTP_200_OK)
 
+    def delete(self, request, pk):
+        user = User.objects.get(pk=pk)
+        user.delete()
+        return Response({'message': 'User Deleted Successfully'}, status=status.HTTP_200_OK)
+
     def post(self, request, pk):
         user = User.objects.get(pk=pk)
