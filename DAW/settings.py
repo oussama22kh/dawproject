@@ -28,7 +28,6 @@ INSTALLED_APPS = [
     'authentication',
     'corsheaders',
     'rest_framework',
-    'rest_framework.authtoken',
     "Users",
     'Alert.apps.AlertConfig',
     'Message.apps.MessageConfig',
